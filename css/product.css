@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #e5e5e5;
+    color: #111;
+    font-family: 'Space Grotesk';
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1F2833;
+    opacity: 0.95;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo_pagina_1 h1 {
+    font-family: 'Space Grotesk';
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+.logo_pagina_1 h1 a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav {
+    padding: 20px 50px;
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 40px;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #28d294, #1F2833);
+    transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #28d294;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+
+.burger-menu .line {
+    background-color: #FFFFFF;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.toggle .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.toggle .line2 {
+    opacity: 0;
+}
+
+.burger-menu.toggle .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav.active ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 50px;
+    background-color: #1F2833;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+nav.active ul li {
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateX(20px);
+    animation: slideIn 0.4s ease forwards;
+}
+
+nav.active ul li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav.active ul li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+nav.active ul li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+nav.active ul li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+nav.active ul li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.166);
+    transform: translateY(-50%);
+}
+
+nav ul li a:hover {
+    color: #28d294;
+}
+
+/*KEYFRAMES SUNT DIN GEN ANIMATION/TRANSTIION : (@keyframes nu scrii) si deam *numnele la keyframe) si deja timpu asa*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.hero {
+    font-family: 'manrope';
+    padding: 180px 20px 100px;
+    text-align: center;
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.collection {
+    margin: 100px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+.product {
+    position: relative;
+    width: 420px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.4s ease-in-out;
+}
+
+
+
+
+
+.product-a{
+    text-decoration: none;
+    color:#111;
+}
+
+
+
+
+
+
+
+
+
+.shadow img {
+    filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.product:hover .primary {
+    opacity: 0;
+}
+
+.product:hover .secondary {
+    opacity: 1;
+}
+
+.secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.product-info {
+    margin-top: 20px;
+}
+
+.product-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 1.3rem; 
+    height: 1.3rem;
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+
+/* Parallax */
+/* .parallax {
+    height: 450px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.parallax-1 {
+    background-image: url('monochrome-fashion-1.jpg');
+}
+
+.parallax-2 {
+     background-image: url('monochrome-fashion-2.jpg');
+}  IN THE FUTURE  IN THE FUTURE IN THE FUTURE IN THE FUTURE */
+
+.pagination {
+    text-align: center;
+    margin-top: 60px;
+    height: 10dvh;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    border: 2px solid #111;
+    margin: 0 10px;
+}
+
+.pagination .active {
+    background: #111;
+    color: #fff;
+}
+
+
+.pagination a {
+    font-size: 1.2rem;
+    padding: 8px 18px;
+}
+
+
+
+/*---------------------------------------------------------------------------------------
+-----------------------------------   FFFFFFFFFFFFFFFFFFFFFFFF   OOOOOOOOO     TTTTTTTTTTTTTTTTTTTTT
+-----------------------------------   F::::::::::::::::::::::F OO:::::::::OO   T:::::::::::::::::::::T
+-----------------------------------   F::::::::::::::::::::::FO:::::::::::::OO T:::::::::::::::::::::T
+-----------------------------------   FF::::::FFFFFFFFF::::::FO:::::::OOO:::::OTT:::::::TT:::::::TT
+-----------------------------------     F:::::F       FFFFFFFO::::::O   O::::::O  T:::::T  TTTTTT  
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O::::::O   O::::::O  T:::::T          
+-----------------------------------   FF:::::::FF           O:::::::OOO:::::::OTT:::::::TT        
+-----------------------------------   F::::::::FF            OO:::::::::::::OO T:::::::::T        
+-----------------------------------   F::::::::FF              OO:::::::::OO   T:::::::::T        
+-----------------------------------   FFFFFFFFFFF                OOOOOOOOO     TTTTTTTTTTT        
+---------------------------------------------------------------------------------------*/
+
+
+.footer {
+    background: linear-gradient(180deg, #3a506b, #1f2833);
+    color: #f3f3f3;
+}
+
+.footer a{
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color:#f3f3f3;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px 60px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.suggestion-btn {
+    font-family: 'Manrope', sans-serif;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1f2833;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.suggestion-btn:hover {
+    background-color: #3a506b;
+}
+
+.footer-map {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social a {
+    font-weight: 600;
+}
+.footer-bottom {
+    font-family: 'space Grotesk', sans-serif;
+    background: #252525;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom span {
+    color: #f3f3f3;
+}
+ 
+@media screen and (max-width: 769px) {
+    nav ul li:not(:last-child)::after {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.active ul {
+        display: flex;
+        width: 10rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .product {
+        max-width: 340px;
+    }
+
+    .parallax {
+        font-size: 2.5rem;
+        height: 350px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .products-grid {
+        gap: 60px;
+    }
+
+    .product {
+        width: 480px;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .parallax {
+        font-size: 4rem;
+        height: 500px;
+    }
+}

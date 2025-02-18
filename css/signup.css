@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #c7c7c7;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    height: 80%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Left Section */
+.left-section {
+    background: #0d0d0d;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* .left-section p {
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+} lasa mai bine*/
+
+.right-section {
+    background: #1f1f1f;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h2 {
+    font-family: 'space grotesk', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+label {
+    font-family: 'manrope';
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+.error {
+    display: block;
+    font-size: 0.8rem;
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.password-container {
+    position: relative;
+}
+
+
+.password-container .toggle-password {
+    position: absolute;
+    right: -30px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+    font-size: 1.2rem;
+}
+
+.password-container .toggle-password:hover {
+    color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #181818;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2e2e2e;
+    color: #dededf;
+}
+
+.terms {
+    font-family: 'Manrope';
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #28d294;
+    text-decoration: none;
+}
+
+.login-link {
+    font-family: 'Manrope';
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link a {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #28d294;
+    text-decoration: none;
+}
+
+.top-left-icon {
+    color:#111;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+}
+
+.top-left-icon a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        width: 90%;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .toggle-buttons button {
+        font-size: 14px;
+        padding: 8px 18px;
+        border-radius: 15px;
+    }
+
+    .form-content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .form-container {
+        max-width: 300px;
+    }
+
+    .password-container .toggle-password {
+        right: 8px;
+        font-size: 1rem;
+    }
+
+    .left-section {
+        padding: 25px;
+    }
+
+    .left-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .left-section p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .terms, .login-link {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 85%;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .form-container {
+        max-width: 280px;
+    }
+
+    .password-container .toggle-password {
+        right: 5px;
+        font-size: 0.9rem;
+    }
+
+    .left-section {
+        padding: 20px;
+    }
+
+    .left-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .left-section p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .toggle-buttons button {
+        font-size: 13px;
+        padding: 6px 15px;
+    }
+
+    .terms, .login-link {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        width: 80%;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 6px;
+        font-size: 11px;
+        border-radius: 5px;
+    }
+
+    input {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    button {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .form-container {
+        max-width: 260px;
+    }
+
+    .password-container .toggle-password {
+        right: 4px;
+        font-size: 0.8rem;
+    }
+
+    .left-section {
+        padding: 15px;
+    }
+
+    .left-section h1 {
+        font-size: 1.4rem;
+    }
+
+    .left-section p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+
+    .toggle-buttons button {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    .terms, .login-link {
+        font-size: 10px;
+    }
+}
+
+
+/*---------------------------------------------------------------------------------------
+-----------------------------------   FFFFFFFFFFFFFFFFFFFFFFFF   OOOOOOOOO     TTTTTTTTTTTTTTTTTTTTT
+-----------------------------------   F::::::::::::::::::::::F OO:::::::::OO   T:::::::::::::::::::::T
+-----------------------------------   F::::::::::::::::::::::FO:::::::::::::OO T:::::::::::::::::::::T
+-----------------------------------   FF::::::FFFFFFFFF::::::FO:::::::OOO:::::OTT:::::::TT:::::::TT
+-----------------------------------     F:::::F       FFFFFFFO::::::O   O::::::O  T:::::T  TTTTTT  
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O::::::O   O::::::O  T:::::T          
+-----------------------------------   FF:::::::FF           O:::::::OOO:::::::OTT:::::::TT        
+-----------------------------------   F::::::::FF            OO:::::::::::::OO T:::::::::T        
+-----------------------------------   F::::::::FF              OO:::::::::OO   T:::::::::T        
+-----------------------------------   FFFFFFFFFFF                OOOOOOOOO     TTTTTTTTTTT        
+---------------------------------------------------------------------------------------*/
+
+
+.footer {
+    background: linear-gradient(180deg, #3a506b, #1f2833);
+    color: #f3f3f3;
+}
+
+.footer a{
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color:#f3f3f3;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px 60px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.suggestion-btn {
+    font-family: 'Manrope', sans-serif;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1f2833;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.suggestion-btn:hover {
+    background-color: #3a506b;
+}
+
+.footer-map {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social a {
+    font-weight: 600;
+}
+.footer-bottom {
+    font-family: 'space Grotesk', sans-serif;
+    background: #252525;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom span {
+    color: #f3f3f3;
+    font-weight: bold;
+}

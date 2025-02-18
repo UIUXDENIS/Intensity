@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'space grotesk';
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    font-family: 'space grotesk';
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+}
+
+input {
+    padding: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.forgot-password {
+    font-family: 'Manrope';
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.forgot-password a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.signup-link {
+    font-family: 'Manrope', sans-serif;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.signup-link a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.top-left-icon {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+}
+
+.top-left-icon a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        max-width: 350px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .forgot-password {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    form {
+        max-width: 300px;
+    }
+
+    input,
+    button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .forgot-password {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    form {
+        max-width: 280px;
+    }
+
+    input,
+    button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .forgot-password {
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    form {
+        max-width: 260px;
+    }
+
+    input,
+    button {
+        font-size: 11px;
+        padding: 5px;
+    }
+
+    .forgot-password {
+        font-size: 10px;
+    }
+}
+
+
+/*---------------------------------------------------------------------------------------
+-----------------------------------   FFFFFFFFFFFFFFFFFFFFFFFF   OOOOOOOOO     TTTTTTTTTTTTTTTTTTTTT
+-----------------------------------   F::::::::::::::::::::::F OO:::::::::OO   T:::::::::::::::::::::T
+-----------------------------------   F::::::::::::::::::::::FO:::::::::::::OO T:::::::::::::::::::::T
+-----------------------------------   FF::::::FFFFFFFFF::::::FO:::::::OOO:::::OTT:::::::TT:::::::TT
+-----------------------------------     F:::::F       FFFFFFFO::::::O   O::::::O  T:::::T  TTTTTT  
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::::::::::::F   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F::::::FFFFFFFFFF   O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O:::::O     O:::::O  T:::::T          
+-----------------------------------     F:::::F             O::::::O   O::::::O  T:::::T          
+-----------------------------------   FF:::::::FF           O:::::::OOO:::::::OTT:::::::TT        
+-----------------------------------   F::::::::FF            OO:::::::::::::OO T:::::::::T        
+-----------------------------------   F::::::::FF              OO:::::::::OO   T:::::::::T        
+-----------------------------------   FFFFFFFFFFF                OOOOOOOOO     TTTTTTTTTTT        
+---------------------------------------------------------------------------------------*/
+
+
+.footer {
+    background: linear-gradient(180deg, #3a506b, #1f2833);
+    color: #f3f3f3;
+}
+
+.footer a{
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    color:#f3f3f3;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 40px 60px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+.footer-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Manrope';
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.suggestion-btn {
+    font-family: 'Manrope', sans-serif;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1f2833;
+    color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.suggestion-btn:hover {
+    background-color: #3a506b;
+}
+
+.footer-map {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-social a {
+    font-weight: 600;
+}
+.footer-bottom {
+    font-family: 'space Grotesk', sans-serif;
+    background: #252525;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom span {
+    color: #f3f3f3;
+    font-weight: bold;
+}
